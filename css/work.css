@@ -1,0 +1,273 @@
+body{
+    background-color: aliceblue;
+    overflow-x: hidden;
+}
+
+:root {
+    --ci1: aliceblue;
+    --ci2: #fa8978;
+    --ci3: #fad179;
+    --ci4: #cdd49a;
+    --ci5: #a7d1be;
+    --ci6: #ccabdb;
+    --ci7: #bb5d4e;
+    --ci8: #ebba52;
+    --ci9: #a6af69;
+    --ci10: #406b57;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--ci1);
+}
+
+::-webkit-scrollbar-thumb {
+    background:var(--ci2);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background:var(--ci7); 
+}
+
+
+
+a:link{
+    text-decoration: none;
+}
+
+.head{
+    /*font-family: 'Chonburi', cursive;*/
+    font-family: 'Pridi', serif;
+}
+
+.subhead{
+    font-family: 'Mitr', sans-serif;
+}
+
+.nav{
+    padding: 20px;
+}
+
+.contact-img{
+    display: flex;
+    justify-content: center;
+}
+.title-contact{
+    text-align: center;
+    font-size: 30pt;
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+}
+.c{
+    color: var(--ci2);
+}
+.n1{
+    color: var(--ci4);
+}
+.t{
+    color: var(--ci5);
+}
+.a1{
+    color: var(--ci6);
+}
+.btn-credit {
+    z-index: 1000;
+    position: fixed;
+    bottom: 35px;
+    right: 75px;
+    cursor: pointer;
+    width: 43px;
+    height: 43px;
+    opacity: 0.5;
+    transition: .5s;
+}
+.btn-credit:hover{
+    opacity: 1;
+}
+
+.credit{
+    z-index: 999;
+    width: 100vw;
+    font-size: 16px;
+    text-align: center;
+    background: #fff;
+    position: fixed;
+    margin: 0;
+    padding: 29px 0 29px 0;
+    bottom: 0;
+    cursor: pointer;
+    display: none;
+    color: var(--ci10);
+}
+
+.btn-credit {
+    z-index: 1000;
+    position: fixed;
+    bottom: 35px;
+    right: 75px;
+    cursor: pointer;
+    width: 43px;
+    height: 43px;
+    opacity: 0.5;
+    transition: .5s;
+}
+
+.btn-credit:hover{
+    opacity: 1;
+}
+
+#button {
+    display: inline-block;
+    background-color: var(--ci3);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 90px;
+    right: 72px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+#button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+#button:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+#button:active {
+    background-color: #555;
+}
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.credit{
+    z-index: 999;
+    width: 100vw;
+    font-size: 16px;
+    text-align: center;
+    background: #fff;
+    position: fixed;
+    margin: 0;
+    padding: 29px 0 29px 0;
+    bottom: 0;
+    cursor: pointer;
+    display: none;
+    color: var(--ci10);
+}
+
+.btn-home{
+    width: 70px;
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    color: var(--ci2);
+    border: 0px;
+    border-radius: 50px;
+    transition-duration: 0.4s;
+}
+
+.btn-about{
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    color: var(--ci3);
+    border: 0px;
+    border-radius: 50px;
+    transition-duration: 0.4s;
+}
+
+.btn-work{
+    width: 70px;
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    color: var(--ci4);
+    border: 0px;
+    border-radius: 50px;
+    transition-duration: 0.4s;
+}
+
+.btn-home:hover {
+    background-color: var(--ci7);
+    color: white;
+}
+
+.btn-about:hover {
+    background-color: var(--ci8);
+    color: white;
+}
+
+.btn-work:hover {
+    background-color: var(--ci9);
+    color: white;
+}
+
+.w{
+    color: var(--ci2);
+}
+
+.o{
+    color: var(--ci3);
+}
+
+.r{
+    color: var(--ci4);
+}
+
+.k{
+    color: var(--ci5);
+}
+
+.title-work{
+    text-align: center;
+    font-size: 30pt;
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+}
+
+.img-work{
+    width: 100vw;
+    align-items: center;
+}
+
+.work-img{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media screen and (max-width: 576px){
+    .work-img{
+        width: 100%;
+        flex-direction: column;
+        margin-left: 10%;
+    }
+    .row{
+        height: 120vh;
+    }
+    img{
+        width: 80%;
+        height: 30%;
+    }
+}
